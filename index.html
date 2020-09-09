@@ -22,7 +22,7 @@
     <h2>Einleitung</h2>
     <p>
       Wenn man bei einem Software-Projekt von "Accessibility" spricht meint man
-      meistens:
+      meistens von folgenden Voraussetzungen:
     </p>
     <ul>
       <li>es ist mit dem Screenreader benutzbar</li>
@@ -37,37 +37,37 @@
 
     <h3>Adressat*innen dieses Textes</h3>
     <p>
-      Einerseits möchte man im Chaosumfeld gerne "All Creatures Welcome" machen
-      und bei einem Online-Event heißt das, Web-Accessibility mit zu bedenken.
-      Andererseits ist es bei all dem wunderbaren DIY oft den Fall dass ein
-      Admin plötzlich Frontend machen soll und einfach nicht weiß wie
-      Web-Accessibility geht. Um das zu überbrücken gibt es diese, mit Absicht
-      knapp gehaltene, Einführung in Web-Accessibility mit weiterführenden Links
-      am Ende.
+      Einerseits möchte man sich im Chaosumfeld gerne dem "All Creatures
+      Welcome" verschreiben, und bei einem Online-Event schließt das ein,
+      Web-Accessibility mit zu bedenken. Andererseits ist es bei all den selbst
+      entwickelten Projekten oft der Fall, dass ein Admin plötzlich Frontend
+      machen soll und einfach nicht weiß wie Web-Accessibility geht. Um das zu
+      überbrücken gibt es diese, mit Absicht knapp gehaltene, Einführung in
+      Web-Accessibility mit weiterführenden Links am Ende.
     </p>
 
     <h3>Erwartetes Publikum und Wichtigkeit</h3>
     <p>
-      Je mehr das, was du da baust, öffentliche Infrastruktur ist, desto mehr
-      Bedeutung solltest du Accessibility zumessen. Wenn deine Webseite nur für
-      deine drei Buddies ist, ist es erstmal nachrangig, aber wenn es für alle
+      Je mehr das, was Du baust, öffentliche Infrastruktur ist, desto mehr
+      Bedeutung solltest Du Accessibility zumessen. Wenn Deine Webseite nur für
+      Deine drei Bezugspersonen ist, ist es erstmal nachrangig. Wenn es für alle
       sein soll, sollten sich auch alle eingeladen fühlen. <br />
-      Accessibility nachträglich einzubauen ist aufwändig. Normalerweise ist es
-      einfacher von Anfang an semantischen Code zu schreiben als unsemantischen
-      Code später zu refactorn.
+      Accessibility nachträglich herzustellen ist aufwändig. Normalerweise ist
+      es einfacher von Anfang an semantischen Code zu schreiben als
+      unsemantischen Code später zu refaktorieren.
     </p>
 
     <h2>Allgemeine Übersichtlichkeit</h2>
     <p>
       Dein Angebot sollte gut verständlich sein. <br />
       Vermeide übermäßig komplizierte Sätze und schwammige Formulierungen, und
-      strukturiere deine Informationen optisch passend zum Inhalt, so dass man
-      das Gesuchte schnell finden kann. Für lange Fließtexte solltest du ein
+      strukturiere Deine Informationen optisch passend zum Inhalt, so dass man
+      das Gesuchte schnell finden kann. Für lange Fließtexte solltest Du ein
       tl;dr schreiben.<br />
-      Nichtbehinderten Menschen sei folgendes Bild mit gegeben: deine Webseite
-      oder App sollte auch benutzbar sein wenn man betrunken oder bekifft ist,
-      oder einen Unfall hatte. Davon profitieren besonders Menschen die schlecht
-      lesen können oder die gerade überfordert sind.
+      Nichtbehinderten Menschen sei folgendes Bild mitgegeben: Deine Webseite
+      oder App sollte auch benutzbar sein, wenn man betrunken ist, oder einen
+      Unfall hatte. Davon profitieren besonders Menschen, die schlecht lesen
+      können oder die gerade überfordert sind.
     </p>
 
     <h2>Semantischer Code</h2>
@@ -82,7 +82,7 @@
     <div class="indented">
       <code>
         &lt;form&gt; <br />
-        &lt;p&gt;Was ist dein Lieblingseis?&lt;/p&gt; <br />
+        &lt;p&gt;Was ist Dein Lieblingseis?&lt;/p&gt; <br />
         &lt;fieldset&gt; <br />
         &lt;input type="radio" id="mc" name="Lieblingseis" value="Banane" /&gt;
         &lt;label for="mc"&gt; Banane&lt;/label&gt; <br />
@@ -97,7 +97,7 @@
     <p>resultiert in:</p>
     <div class="form-example indented">
       <form>
-        <p>Was ist dein Lieblingseis?</p>
+        <p>Was ist Dein Lieblingseis?</p>
         <fieldset>
           <input type="radio" id="mc" name="Lieblingseis" value="Banane" />
           <label for="mc"> Banane</label>
@@ -112,7 +112,7 @@
     <div class="indented">
       <code>
         &lt;form&gt; <br />&lt;fieldset&gt; <br />
-        &lt;legend&gt;Was ist dein Lieblingseis?&lt;/legend&gt; <br />
+        &lt;legend&gt;Was ist Dein Lieblingseis?&lt;/legend&gt; <br />
         &lt;input type="radio" id="mc" name="Lieblingseis" value="Banane" /&gt;
         &lt;label for="mc"&gt; Banane&lt;/label&gt; <br />
         &lt;input type="radio" id="vi" name="Lieblingseis" value="Erdbeer" /&gt;
@@ -128,7 +128,7 @@
     <div class="form-example indented">
       <form>
         <fieldset>
-          <legend>Was ist dein Lieblingseis?</legend>
+          <legend>Was ist Dein Lieblingseis?</legend>
           <input type="radio" id="mc" name="Lieblingseis" value="Banane" />
           <label for="mc"> Banane</label>
           <input type="radio" id="vi" name="Lieblingseis" value="Erdbeer" />
@@ -140,23 +140,23 @@
     </div>
     <p>
       Optisch ist der Unterschied gering (und kann selbstverständlich mit CSS
-      gestylt werden). Semantisch jedoch ist es unterschiedlich, die Frage "Was
-      ist dein Lieblingseis?" ist kein eigener Absatz (<code>&lt;p&gt;</code>)
+      gestylt werden). Semantisch jedoch ist es unterschiedlich. Die Frage "Was
+      ist Dein Lieblingseis?" ist kein eigener Absatz (<code>&lt;p&gt;</code>)
       sondern direkt zum Fielset gehörig und sollte als Legende
       (<code>&lt;legend&gt;</code>) ausgezeichnet sein, weil Screenreader das
       dann als zusammengehörig interpretieren.
-      <a href="http://diveintohtml5.info">html5</a> ist wunderbar dafür
+      <a href="http://diveintohtml5.info">HTML5</a> ist wunderbar dafür
       geeignet, viele dieser Dinge "ganz von selbst" richtig zu machen.
     </p>
 
     <h3>In der Realität: Tools benutzen und mal das CSS deaktivieren</h3>
     <p>
-      Im richtigen Leben hat aber kaum jemand alle html-Tags im Kopf.
+      Im richtigen Leben hat aber kaum jemand alle HTML-Tags im Kopf.
       Glücklicherweise ist das kein Problem, denn wenn man die Grundlagen
-      verstanden hat kann man sich sehr gut mit Accessibility-Audit-Tools
+      verstanden hat, kann man sich sehr gut mit Accessibility-Audit-Tools
       behelfen, zum Beispiel
       <a href="https://wave.webaim.org">WAVE</a>. Es weist auf die meisten der
-      Probleme hin und die sind dann auch meist schnell zu beheben.
+      Probleme hin und diese sind dann auch meist schnell zu beheben.
     </p>
     <p>
       Wenn Deine Webseite mit deaktiviertem CSS immer noch verständlich ist,
@@ -165,24 +165,24 @@
 
     <h2>Farbkontrast</h2>
     <p>
-      Für viele Menschen ist es wichtig dass der Kontrast zwischen Schrift und
-      Hintergrund groß genug ist, 100% schwarz auf 100% weiß ist aber auch nicht
-      unbedingt gut. Für optimale Lesbarkeit wird ein Mindest-Farbkontrast von
-      7:1 empfohlen, wie er auf dieser Webseite verwendet ist. Sprich: der Text
-      den du jetzt liest hat den Mindest-Kontrast der für Web-Accessibility
-      empfohlen wird.
+      Für viele Menschen ist es wichtig, dass der Kontrast zwischen Schrift und
+      Hintergrund groß genug ist. 100% schwarz auf 100% weiß ist aber auch nicht
+      die ideale Lösung. Für optimale Lesbarkeit wird ein Mindest-Farbkontrast
+      von 7:1 empfohlen, wie er auf dieser Webseite verwendet ist. Sprich: der
+      Text, den Du jetzt liest, hat den Mindestkontrast, der für
+      Web-Accessibility empfohlen wird.
     </p>
     <h3>Hell oder dunkel?</h3>
     <p>
       Der Kontrast zwischen Schrift und Hintergrund muss durch die Helligkeit
       realisiert werden, nicht durch den Farbton. Zu Beginn der Farbplanung
-      solltest du dir überlegen: was soll es werden, hell auf dunkel oder dunkel
-      auf hell? Nein, rot auf blau geht wirklich nicht.
+      solltest Du dir überlegen: was soll es werden, hell auf dunkel oder dunkel
+      auf hell? Und: nein, rot auf blau geht wirklich nicht.
     </p>
     <h3>Farbkontrast-Tool</h3>
     <p>
       Im frühen Planungsstadium einer Webseite oder App möchte man für
-      gewöhnlich Farben festlegen, und da ist noch nicht so viel programmiert
+      gewöhnlich Farben festlegen, und da ist noch nicht so viel programmiert,
       dass man WAVE sinnvoll nutzen kann. Hier bietet sich
       <a href="https://webaim.org/resources/contrastchecker/">
         ein Farbkontraste-Tester</a
@@ -191,22 +191,23 @@
     </p>
     <h3>Vorsicht bei Hintergrundbildern</h3>
     <p>
-      Bei Farbverläufen und Hintergrundbildern ist Vorsicht geboten, denn es ist
-      da schwierig zu gewährleisten dass wirklich die komplette Schrift auf
-      allen Geräten mit hinreichend Kontrast dargestellt wird. Das heißt nicht
-      dass Accessibility und Hintergrundbilder grundsätzlich unvereinbar sind,
-      aber man sollte das sehr penibel testen und beim durchschnittlichen
-      Open-Source-Projekt tut das selten jemand, und deshalb empfiehlt es sich,
-      Text immer auf einfarbigen Hintergrund zu schreiben. <br />
-      Auf bewegliche Darstellungen hinter einem Text sollte generell verzichtet
-      werden, außer bei dem Text handelt es sich um Untertitel.
+      Bei Farbverläufen und Hintergrundbildern ist Vorsicht geboten. Dabei ist
+      es generell schwierig zu gewährleisten, dass wirklich die komplette
+      Schrift auf allen Geräten mit hinreichend Kontrast dargestellt wird. Das
+      heißt nicht, dass Accessibility und Hintergrundbilder generell
+      unverträglich sind. Dennoch sollte man sehr penibel testen (und beim
+      durchschnittlichen Open-Source-Projekt tut das selten jemand). Deshalb ist
+      man in der Regel besser damit bedient, wenn man Text auf einfarbigen
+      Hintergrund setzt. <br />
+      Auf bewegliche Darstellungen hinter einem Text solltest Du generell
+      verzichten, außer bei dem Text handelt es sich um Untertitel.
     </p>
 
     <h2>Schriftgröße</h2>
 
     <p>
-      Die Schriftgröße sollte nicht zu klein sein und es ist wichtig dass die
-      Schriftgröße im Browser verstellbar ist bzw. dass man in der Webseite
+      Die Schriftgröße sollte nicht zu klein sein. Außerdem ist es wichtig, dass
+      die Schriftgröße im Browser verstellbar ist bzw. dass man in der Webseite
       zoomen kann.
     </p>
 
@@ -214,7 +215,7 @@
     <p>
       Damit ein Screenreader die Webseite gut verständlich vorlesen kann, ist es
       bei Links wichtig, dass der Teil des Satzes, der den Link trägt, wörtlich
-      das sagt wohin gelinkt werden soll. Zum Beispiel:
+      das sagt, wohin gelinkt werden soll. Zum Beispiel:
     </p>
     <div class="indented">
       "Hier bietet sich
@@ -251,8 +252,8 @@
       </code>
     </div>
     <p>
-      Und wenn es geht, mache Untertitel zu deinen Videos und veröffentliche
-      Podcast-Scripte. Das erfreut auch die Durchsuchbarkeit.
+      Wenn es möglich ist, mache Untertitel zu Deinen Videos und veröffentliche
+      Podcast-Scripte. Das verbessert auch die Durchsuchbarkeit.
     </p>
 
     <h2>Sensorik und Animationen</h2>
@@ -266,7 +267,7 @@
       >
         hier</a
       >
-      gut beschrieben. Vermeide oder reduziere Animationen in dem Fall dass
+      gut beschrieben. Vermeide oder reduziere Animationen in dem Fall, dass
       jemand "weniger Bewegung" aktiviert hat.
     </p>
     <p>Codebeispiel:</p>
@@ -285,15 +286,15 @@
 
     <h2>Ausnahmen und Erwartungs&#173;management</h2>
     <p>
-      Wenn du weißt, dass dein Projekt Accessibility-Spielregeln verletzt, ist
+      Wenn Du weißt, dass Dein Projekt Accessibility-Spielregeln verletzt, ist
       ein guter Kompromiss, das so auszuweisen. Zum Beispiel könnte an einem
       Link zu einem Disko-BBB mit Blinklicht dran stehen "Achtung Blinklicht,
-      dieser BBB ist für Epileptiker*innen ungeeignet." So kannst du mit deinem
-      Hackerspace Blinklicht-Spaß haben ohne anderen zu schaden.
+      dieser BBB ist für Epileptiker*innen ungeeignet." So kannst Du mit Deinem
+      Hackerspace Blinklicht-Spaß haben, ohne anderen zu schaden.
     </p>
 
     <h2>Weiterführende Links</h2>
-    <h3>Informationen</h3>
+    <h3>Umfassende Informationen</h3>
     <ul>
       <li>
         <a href="https://romeo.elsevier.com/accessibility_checklist/"
@@ -301,15 +302,8 @@
         >
       </li>
       <li>
-        <a href="https://developer.mozilla.org/de/docs/Web/Barrierefreiheit"
-          >Mozilla Übersichtsseite zum Lernen von Web-Accessibility</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility"
-          >Gute Einführung in Accessibility im Rahmen von Bross-Browser-Testing,
-          Mozilla</a
+        <a href="https://de.wikipedia.org/wiki/Barrierefreies_Internet"
+          >"Barrierefreies Internet" in der Wikipedia</a
         >
       </li>
       <li>
@@ -317,14 +311,42 @@
           >Kriterien der BIENE 2010</a
         >
       </li>
+    </ul>
+
+    <h3>Lernen bei Mozilla</h3>
+
+    <ul>
       <li>
-        <a href="https://de.wikipedia.org/wiki/Barrierefreies_Internet"
-          >"Barrierefreies Internet" in der Wikipedia</a
+        <a href="https://developer.mozilla.org/de/docs/Web/Barrierefreiheit"
+          >Übersichtsseite zum Lernen von Web-Accessibility</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility"
+          >Gute Einführung in Accessibility im Rahmen von
+          Bross-Browser-Testing</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+          >"prefers-reduced-motion"</a
         >
       </li>
     </ul>
     <h3>Werkzeuge</h3>
     <ul>
+      <li>
+        <a href="https://wave.webaim.org"
+          >WAVE (web accessibility evaluation tool)</a
+        >
+      </li>
+      <li>
+        <a href="https://webaim.org/resources/contrastchecker/"
+          >Farbkontrast-Tester</a
+        >
+      </li>
       <li>
         <a href="https://www.toptal.com/designers/colorfilter"
           >Testseite für Farb-Fehlsichtigkeit</a
