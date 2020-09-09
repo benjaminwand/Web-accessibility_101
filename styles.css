@@ -26,6 +26,12 @@ a:focus {
 h1 {
   text-align: center;
 }
+h2 {
+  color: white;
+  background-color: #595959;
+  display: inline;
+  padding: 0 2.5rem;
+}
 
 code {
   color: #242424;
