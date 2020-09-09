@@ -15,7 +15,7 @@
       Benutze <a href="https://wave.webaim.org">WAVE</a> und mach' bei
       <a
         href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
-        >"reduced motion:reduce"</a
+        >"reduced motion: reduce"</a
       >
       aufwändige Animationen weg.
     </p>
@@ -209,7 +209,9 @@
     <p>ist gut und</p>
     <div class="indented">
       "Hier bietet sich ein Farbkontraste-Tester zum Ausprobieren an.
-      <a href="https://webaim.org/resources/contrastchecker/">Hier klicken.</a>
+      <a href="https://webaim.org/resources/contrastchecker/"
+        >(Hier klicken.)</a
+      >
       "
     </div>
     <p>
@@ -220,7 +222,7 @@
     <p>
       Für verschiedene besondere Bedürfnisse kann Text auf verschiedene Weise
       zugänglich gemacht werden, zum Beispiel mit einer
-      <a href="https://de.wikipedia.org/wiki/Braillezeile">Braillezeile</a>, das
+      <a href="https://de.wikipedia.org/wiki/Braillezeile">Braillezeile</a>. Das
       funktioniert aber nur wenn die Information auch als Text vorliegt. <br />
       Achte darauf dass Grafiken
       <a href="https://de.wikipedia.org/wiki/Alt-Text">einen Alt-Text</a>
@@ -240,24 +242,37 @@
     <p>
       Es gibt eine Systemeinstellung "weniger Bewegung", die je nach
       Betriebssystem unterschiedlich heißt aber betriebssystem-übergreifend mit
-      einem Media-Query abgefragt werden kann. Es nennt sich
-      "prefers-reduced-motion: reduce" und ist
+      einem Media-Query abgefragt werden kann. Dieser nennt sich
+      "prefers-reduced-motion" und ist
       <a
         href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
       >
         hier</a
       >
-      gut beschrieben. Wenn nun schon jemand angegeben hat kein Gezappel sehen
-      zu wollen, respektiert das bitte und reduziert eventuelle aufwändige
-      Animationen.
+      gut beschrieben. Wenn jemand "reduced motion: reduce" eingestellt hat,
+      vermede oder reduziere Animationen.
     </p>
+    <p>Codebeispiel:</p>
+    <div class="indented">
+      <code>
+        .myDiv { <br />transition: all ease 0.6s; <br />
+        } <br />
+        .myDiv:hover { <br />
+        transform: scale(1.05) <br />rotate(0.5deg); <br />
+        } <br />@media (prefers-reduced-motion: reduce) { <br />.myDiv:hover {
+        <br />transform: scale(1) <br />
+        rotate(0deg); <br />
+        } <br />}
+      </code>
+    </div>
 
     <h2>Ausnahmen und Erwartungsmanagement</h2>
     <p>
-      Wenn du weißt dass dein Projekt Accessibility-Spielregeln verletzt, ist
+      Wenn du weißt, dass dein Projekt Accessibility-Spielregeln verletzt, ist
       ein guter Kompromiss, das so auszuweisen. Zum Beispiel könnte an einem
       Link zu einem Disko-BBB mit Blinklicht dran stehen "Achtung Blinklicht,
-      dieser BBB ist für Epileptiker*innen ungeeignet."
+      dieser BBB ist für Epileptiker*innen ungeeignet." So kannst du mit deinem
+      Hackerspace Blinklicht-Spaß haben ohne anderen zu schaden.
     </p>
 
     <h2>Weiterführende Links</h2>
