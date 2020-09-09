@@ -29,10 +29,9 @@ h2 {
   color: white;
   background-color: #595959;
   padding: 0.25rem 2.5rem;
-}
-
-code {
-  color: #242424;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 fieldset {
@@ -48,7 +47,7 @@ legend {
 }
 
 .indented {
-  padding-left: 5rem;
+  padding-left: 2rem;
 }
 
 .tldr {
@@ -70,5 +69,8 @@ legend {
   h2 {
     display: inline-block;
     1.margin-top: 5em;
+  }
+  .indented {
+    padding-left: 5rem;
   }
 }
