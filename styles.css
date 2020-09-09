@@ -71,3 +71,55 @@ legend {
     padding-left: 5rem;
   }
 }
+
+@media print {
+  *{
+@media (prefers-color-scheme: dark) {
+
+
+  }    background: transparent !important;
+    color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #595959;
+    color: white;
+  }
+  .tldr {
+    border: solid 2px #6cf;
+    border-radius: 8px;
+    background: #606;
+    color: white;
+    padding: 1rem;
+    font-size: large;
+  }
+  a {
+    color: #6cf;
+  }
+  h1, h2 {
+    color: #595959;
+    background-color: white;
+  }
+}
