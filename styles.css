@@ -16,7 +16,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #1D5C87;
+  color: #0059B3;
 }
 a:hover,
 a:focus {
@@ -32,18 +32,34 @@ code {
 }
 
 fieldset {
- border: solid 2px pink;
- border-radius: 8px;
- display: inline-block;
+  border: solid 2px pink;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 legend {
-
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
 .indented {
-   padding-left: 5rem;
+  padding-left: 5rem;
+}
+
+.tldr {
+  border: solid 2px pink;
+  border-radius: 8px;
+  background: pink;
+  color: black;
+  padding: 1rem;
+  font-size: large;
+}
+
+@media only screen and (min-width: 40rem) {
+  .tldr {
+    display: block;
+    float: right;
+    width: 16rem;
+  }
 }

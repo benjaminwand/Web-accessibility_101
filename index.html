@@ -9,20 +9,14 @@
   <body>
     <h1>Web Accessibility 101</h1>
 
-    <h2>tl;dr</h2>
-    <p>
-      Benutzt <a href="https://wave.webaim.org">wave</a> und macht bei gewähltem
-      "reduced motion:reduce" aufwändige Animationen weg.
-    </p>
-    <h2>Adressat*innen dieses Textes</h2>
-    <p>
-      Einerseits möchte man im Chaosumfeld gerne "All Creatures Welcome" machen
-      und bei einem Online-Event heißt das, Web-Accessibility mit zu bedenken.
-      Andererseits ist es bei all dem wunderbardn DIY oft den Fall dass ein
-      Admin plötzlich Frontend machen soll und einfach nicht weiß wie
-      Web-Accessibility geht. Um das zu überbrücken gibt es diese mit Absicht
-      knapp gehaltene Einführung in Web-Accessibility mit weiterführenden Links
-      am Ende.
+    <p class="tldr">
+      <strong>tl;dr</strong> <br />
+      Benutzt <a href="https://wave.webaim.org">WAVE</a> und macht bei
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+        >"reduced motion:reduce"</a
+      >
+      aufwändige Animationen weg.
     </p>
     <h2>Einleitung</h2>
     <p>
@@ -39,7 +33,19 @@
       "reduced motion" abzufragen und die Animationen gegebenenfalls abzustellen
       oder deutlich zu reduzieren.
     </p>
-    <h2>Erwartetes Publikum und Wichtigkeit</h2>
+
+    <h3>Adressat*innen dieses Textes</h3>
+    <p>
+      Einerseits möchte man im Chaosumfeld gerne "All Creatures Welcome" machen
+      und bei einem Online-Event heißt das, Web-Accessibility mit zu bedenken.
+      Andererseits ist es bei all dem wunderbaren DIY oft den Fall dass ein
+      Admin plötzlich Frontend machen soll und einfach nicht weiß wie
+      Web-Accessibility geht. Um das zu überbrücken gibt es diese, mit Absicht
+      knapp gehaltene, Einführung in Web-Accessibility mit weiterführenden Links
+      am Ende.
+    </p>
+
+    <h3>Erwartetes Publikum und Wichtigkeit</h3>
     <p>
       Je mehr das was du da baust öffentliche Infrastruktur für alle ist, desto
       mehr Bedeutung solltest du Accessibility zumessen. Wenn deine Webseite nur
@@ -121,10 +127,10 @@
     <p>
       Optisch ist der Unterschied gering (und kann selbstverständlich mit CSS
       gestyled werden). Semantisch jedoch ist es unterschiedlich, die Frage "Was
-      ist dein Lieblingseis?" ist kein Absatz (<code>&lt;p&gt;</code>) sondern
-      tatsächlich die Fielset-Legende (<code>&lt;legend&gt;</code>) und sollte
-      entsprechend ausgezeichnet sein weil Screenreader das dann als
-      zusammengehörig interpretieren.
+      ist dein Lieblingseis?" ist kein eigener Absatz (<code>&lt;p&gt;</code>)
+      sondern direkt zum Fieldet gehörig und sollte als Legende
+      (<code>&lt;legend&gt;</code>) ausgezeichnet sein weil Screenreader das
+      dann als zusammengehörig interpretieren.
       <a href="http://diveintohtml5.info">html5</a> ist wunderbar dafür geeignet
       viele dieser Dinge "ganz von selbst" richtig zu machen.
     </p>
@@ -173,8 +179,8 @@
       nicht dass Accessibility und Hintergrundbilder generell unverträglich sind
       aber man sollte da sehr penibel testen und beim durchschnittlichen
       Open-Source-Projekt tut das selten jemand, und deshalb tut man in der
-      Regel besser wenn man Text auf einfarbigen Hintergrund schreibt. <br />
-      Auf bewegliche Darstellungen hinter einem Text sollte generell verzichtet
+      Regel besser wenn man Text auf einfarbigen Hintergrund schreibt. Auf
+      bewegliche Darstellungen hinter einem Text sollte generell verzichtet
       werden.
     </p>
 
@@ -206,8 +212,7 @@
       "
     </div>
     <p>
-      ist nicht gut. Es gibt für diese Fragestellung nicht immer eine perfekte
-      Lösung aber versucht es bitte.
+      ist nicht gut.
     </p>
 
     <h2>Informationen als Text vorhalten</h2>
@@ -215,8 +220,8 @@
       Für verschiedene besondere Bedürfnisse kann Text auf verschiedene Weise
       zugänglich gemacht werden, zum Beispiel mit einer
       <a href="https://de.wikipedia.org/wiki/Braillezeile">Braillezeile</a>, das
-      funktioniert aber nur wenn die Information auch als Text vorliegt. Achtet
-      darauf dass Grafiken
+      funktioniert aber nur wenn die Information auch als Text vorliegt. <br />
+      Achte darauf dass Grafiken
       <a href="https://de.wikipedia.org/wiki/Alt-Text">einen Alt-Text</a>
       enthalten. Beispiel:
     </p>
@@ -226,7 +231,7 @@
       </code>
     </div>
     <p>
-      Und wenn es geht macht Untertitel zu euren Videos und veröffentlicht
+      Und wenn es geht, mache Untertitel zu deinen Videos und veröffentliche
       Podcast-Scripte. Das erfreut auch die Durchsuchbarkeit.
     </p>
 
