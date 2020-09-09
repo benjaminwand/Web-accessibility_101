@@ -1,11 +1,6 @@
-html {
-  color: #222;
+body {
   font-size: 1em;
   line-height: 1.4;
-  background-color: #fff;
-}
-
-body {
   font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
   background: white;
   color: #595959;

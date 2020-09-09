@@ -2,6 +2,7 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Web Accessibility 101</title>
 
     <link rel="stylesheet" href="styles.css" />
@@ -11,7 +12,7 @@
 
     <p class="tldr">
       <strong>tl;dr</strong> <br />
-      Benutzt <a href="https://wave.webaim.org">WAVE</a> und macht bei
+      Benutze <a href="https://wave.webaim.org">WAVE</a> und mach' bei
       <a
         href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
         >"reduced motion:reduce"</a
@@ -47,18 +48,18 @@
 
     <h3>Erwartetes Publikum und Wichtigkeit</h3>
     <p>
-      Je mehr das was du da baust öffentliche Infrastruktur für alle ist, desto
-      mehr Bedeutung solltest du Accessibility zumessen. Wenn deine Webseite nur
-      für deine drei Buddies ist, ist es erstmal nachrangig, aber wenn es für
-      alle sein soll, sollten sich auch alle eingeladen fühlen. <br />
-      Accessibility nachträglich einzubauen ist auswändig. Normalerweise ist es
+      Je mehr das was du da baust öffentliche Infrastruktur für, desto mehr
+      Bedeutung solltest du Accessibility zumessen. Wenn deine Webseite nur für
+      deine drei Buddies ist, ist es erstmal nachrangig, aber wenn es für alle
+      sein soll, sollten sich auch alle eingeladen fühlen. <br />
+      Accessibility nachträglich einzubauen ist aufwändig. Normalerweise ist es
       einfacher von Anfang an semantischen Code zu schreiben als unsemantischen
       Code später zu refactorn.
     </p>
 
     <h2>Semantischer Code</h2>
     <p>
-      "Semantischer Code" bedeutet dass die Elemente entsprechend ihrer
+      "Semantischer Code" bedeutet, dass die Elemente entsprechend ihrer
       inhaltlichen Bedeutung ausgezeichnet sind.
     </p>
     <h3>Beispiel: Fieldset Legende</h3>
@@ -126,10 +127,10 @@
     </div>
     <p>
       Optisch ist der Unterschied gering (und kann selbstverständlich mit CSS
-      gestyled werden). Semantisch jedoch ist es unterschiedlich, die Frage "Was
+      gestylt werden). Semantisch jedoch ist es unterschiedlich, die Frage "Was
       ist dein Lieblingseis?" ist kein eigener Absatz (<code>&lt;p&gt;</code>)
-      sondern direkt zum Fieldet gehörig und sollte als Legende
-      (<code>&lt;legend&gt;</code>) ausgezeichnet sein weil Screenreader das
+      sondern direkt zum Fielset gehörig und sollte als Legende
+      (<code>&lt;legend&gt;</code>) ausgezeichnet sein, weil Screenreader das
       dann als zusammengehörig interpretieren.
       <a href="http://diveintohtml5.info">html5</a> ist wunderbar dafür geeignet
       viele dieser Dinge "ganz von selbst" richtig zu machen.
@@ -179,9 +180,9 @@
       nicht dass Accessibility und Hintergrundbilder generell unverträglich sind
       aber man sollte da sehr penibel testen und beim durchschnittlichen
       Open-Source-Projekt tut das selten jemand, und deshalb tut man in der
-      Regel besser wenn man Text auf einfarbigen Hintergrund schreibt. Auf
-      bewegliche Darstellungen hinter einem Text sollte generell verzichtet
-      werden.
+      Regel besser wenn man Text auf einfarbigen Hintergrund schreibt. <br />
+      Auf bewegliche Darstellungen hinter einem Text sollte generell verzichtet
+      werden, außer bei dem Text handelt es sich um Untertitel.
     </p>
 
     <h2>Schriftgröße</h2>
