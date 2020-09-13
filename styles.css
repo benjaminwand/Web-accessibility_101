@@ -1,5 +1,4 @@
 body {
-  font-size: 1em;
   line-height: 1.5;
   font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
   background: white;
@@ -7,6 +6,7 @@ body {
   max-width: 50rem;
   margin: auto;
   padding: 1rem;
+  font-size: large;
 }
 
 a {
@@ -31,7 +31,7 @@ h2 {
   padding: 0.25rem 2.5rem;
 }
 p {
-  max-width: 85ch;
+  max-width: 78ch;
 }
 
 fieldset {
@@ -57,6 +57,9 @@ legend {
   color: black;
   padding: 1rem;
   font-size: large;
+}
+code {
+  font-size: medium;
 }
 
 @media only screen and (min-width: 40rem) {
@@ -114,6 +117,9 @@ legend {
   }
   h3 {
     font-size: 14px;
+  }
+  code {
+    font-size: 10px;
   }
 }
 @media (prefers-color-scheme: dark) {
