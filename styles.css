@@ -1,10 +1,10 @@
 body {
   font-size: 1em;
-  line-height: 1.4;
+  line-height: 1.5;
   font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
   background: white;
   color: #595959;
-  max-width: 60rem;
+  max-width: 50rem;
   margin: auto;
   padding: 1rem;
 }
@@ -29,6 +29,9 @@ h2 {
   color: white;
   background-color: #595959;
   padding: 0.25rem 2.5rem;
+}
+p {
+  max-width: 85ch;
 }
 
 fieldset {
@@ -73,20 +76,22 @@ legend {
 }
 
 @media print {
-  *{
-@media (prefers-color-scheme: dark) {
-
-
-  }    background: transparent !important;
+  * {
+    background: transparent !important;
     color: #000 !important; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
     box-shadow: none;
     text-shadow: none;
+    font-size: 12px;
+  }
+  .tldr {
+    font-size: 12px;
+    float: right;
+    width: 30%;
+    border: solid 2px red;
   }
 
-
-  a,
-  a:visited {
+  a {
     text-decoration: underline;
   }
 
@@ -100,6 +105,15 @@ legend {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 14px;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -118,7 +132,8 @@ legend {
   a {
     color: #6cf;
   }
-  h1, h2 {
+  h1,
+  h2 {
     color: #595959;
     background-color: white;
   }
