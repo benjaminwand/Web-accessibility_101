@@ -124,23 +124,23 @@ code {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background: #595959;
-    color: white;
+    background: #353535;
+    color: #c3c3c3;
   }
   .tldr {
-    border: solid 2px #6cf;
+    border: solid 2px #7accff;
     border-radius: 8px;
-    background: #606;
-    color: white;
+    background: #620062;
+    color: #c3c3c3;
     padding: 1rem;
     font-size: large;
   }
   a {
-    color: #6cf;
+    color: #7accff;
   }
   h1,
   h2 {
-    color: #595959;
-    background-color: white;
+    color: #353535;
+    background-color: #c3c3c3;
   }
 }
