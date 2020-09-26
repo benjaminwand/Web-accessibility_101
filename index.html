@@ -22,11 +22,14 @@
 
     <h2>Einleitung</h2>
     <p>
-      Wenn man bei einem Software-Projekt von "Accessibility" spricht, meint man
-      meistens von folgendes:
+      Wenn bei einem Software-Projekt von "Accessibility" gesprochen wird, meint
+      das meistens folgendes:
     </p>
     <ul>
-      <li>es ist mit dem Screenreader benutzbar</li>
+      <li>
+        Dein Projekt ist (als Fallback) in Textform verfügbar und mit einem
+        Screenreader benutzbar,
+      </li>
       <li>man kann drin zoomen, und</li>
       <li>die Schrift hat genug Farbkontrast zum Hintergrund.</li>
     </ul>
@@ -35,7 +38,7 @@
       "reduced motion" abzufragen und die Animationen gegebenenfalls abzustellen
       oder deutlich zu reduzieren.
     </p>
-    <h3>Adressat*innen dieses Textes</h3>
+    <h3>An wen richtet sich dieser Text?</h3>
     <p>
       Einerseits möchte man sich im Chaosumfeld gerne dem "All Creatures
       Welcome" verschreiben, und bei einem Online-Event schließt das ein,
@@ -50,14 +53,35 @@
     <p>
       Je mehr das, was Du baust, öffentliche Infrastruktur ist, desto mehr
       Bedeutung solltest Du Accessibility zumessen. Wenn Deine Webseite nur für
-      Deine drei Bezugspersonen ist, ist es erstmal nachrangig. Wenn es für alle
-      sein soll, sollten sich auch alle eingeladen fühlen. <br />
+      Deine drei Bezugspersonen ist, und diese keine besonderen Bedürfnisse
+      haben, ist es erstmal nachrangig. Wenn es für alle sein soll, sollten sich
+      auch alle eingeladen fühlen. <br />
       Accessibility nachträglich herzustellen ist aufwändig. Normalerweise ist
       es einfacher von Anfang an semantischen Code zu schreiben als
-      unsemantischen Code später zu refaktorieren.
+      unsemantischen Code später zu refaktorieren. <br />
+      Natürlich gibt es keine absolute Barrierefreiheit und das erwartet auch
+      niemand von dir. Uns ist es wichtig, Dich darüber zu informieren, was
+      Barrieren sind und, wie Du sie vermeiden kannst.
+    </p>
+    <h3>Ausnahmen und Erwartungs&#173;management</h3>
+    <p>
+      Wenn Du weißt, dass auf Deiner Webseite etwas stattfindet, das für manche
+      behinderte Personen nicht (gut) funktioniert, ist es nicht unbedingt
+      schlimm, aber du solltest es ausweisen. Zum Beispiel könnte an einem Link
+      zu einem Disko-BBB mit Blinklicht dran stehen "Achtung Blinklicht, dieser
+      BBB ist für Epileptiker*innen ungeeignet." So kannst Du mit Deinem
+      Hackerspace Blinklicht-Spaß haben, ohne anderen zu schaden.
+    </p>
+    <p>
+      "Blinklicht" kann auf dem rC3 auch als Tag gesetzt werden, der zum einen
+      Menschen die Möglichkeit bietet, Inhalte nach diesem Kriterium
+      rauszufiltern. Es freuen sich aber natürlich auch Menschen, die voll auf
+      Blinklicht stehen, weil sie deine Disko leichter finden können: Viele
+      Optionen für Barrierefreiheit sind unterm Strich praktisch für alle
+      Menschen.
     </p>
 
-    <h2>Allgemeine Übersichtlichkeit</h2>
+    <h2>Allgemeine Übersichtlichkeit 1</h2>
     <p>
       Dein Angebot sollte gut verständlich sein. <br />
       Vermeide übermäßig komplizierte Sätze und schwammige Formulierungen, und
@@ -70,7 +94,121 @@
       können oder die gerade überfordert sind.
     </p>
 
-    <h2>Semantischer Code</h2>
+    <h2>Informationen als Text vorhalten 2</h2>
+    <p>
+      Für verschiedene besondere Bedürfnisse kann Text auf verschiedene Weise
+      zugänglich gemacht werden, zum Beispiel mit einer
+      <a href="https://de.wikipedia.org/wiki/Braillezeile">Braillezeile</a>. Das
+      funktioniert aber nur wenn die Information auch als Text vorliegt. <br />
+      Achte darauf dass Grafiken
+      <a href="https://de.wikipedia.org/wiki/Alt-Text"
+        >einen beschreibenden Alt-Text</a
+      >
+      enthalten. Beispiel:
+    </p>
+    <div class="indented">
+      <code>
+        &lt;img src="koelner-dom.jpg" alt="Der Kölner Dom im Abendlicht."&gt;
+      </code>
+    </div>
+    <p>
+      Wenn es möglich ist, mache Untertitel zu Deinen Videos und veröffentliche
+      Podcast-Scripte. Das verbessert auch die Durchsuchbarkeit.
+    </p>
+
+    <h2>Sprechende Links 3</h2>
+    <p>
+      Damit ein Screenreader die Webseite gut verständlich vorlesen kann, ist es
+      bei Links wichtig, dass der Teil des Satzes, der den Link trägt, wörtlich
+      das sagt, wohin gelinkt werden soll. Zum Beispiel:
+    </p>
+    <div class="indented">
+      "Hier bietet sich
+      <a href="https://webaim.org/resources/contrastchecker/">
+        ein Farbkontraste-Tester</a
+      >
+      zum Ausprobieren an."
+    </div>
+    <p>ist gut und</p>
+    <div class="indented">
+      "Hier bietet sich ein Farbkontraste-Tester zum Ausprobieren an.
+      <a href="https://webaim.org/resources/contrastchecker/"
+        >(Hier klicken.)</a
+      >
+      "
+    </div>
+    <p>
+      ist nicht gut.
+    </p>
+
+    <h2>Content Notes 4</h2>
+    <p>
+      Es gibt Menschen die sich aus den verschiedensten Gründen mit etwas nicht
+      auseinandersetzen können oder wollen. Die rC3-Plattform bietet diesen
+      Menschen daher die Möglichkeit, bestimmte Tags zu filtern, damit sie mit
+      diesen auf dem Event nicht unerwartet konfrontiert werden. Bitte sei also
+      fleißig beim Taggen und erwähne Themen, die für manche potentiell
+      schwierig sein könnten. (Auch hier freut sich die Durchsuchbarkeit!)
+      <br />
+      Kurz am Anfang eines Beitrags den Inhalt durch Content Notes zu
+      beschreiben, kann hier helfen. <br />
+      Beispiel für eine blinkende Disko, die vom C3WOC ausgerichtet wird: <br />
+      CN: Blinklicht, Essen, Musik
+    </p>
+
+    <h2>Farbkontrast 5</h2>
+    <p>
+      Für viele Menschen ist es wichtig, dass der Kontrast zwischen Schrift und
+      Hintergrund groß genug ist. 100% schwarz auf 100% weiß ist aber auch nicht
+      die ideale Lösung. Für optimale Lesbarkeit wird ein Mindest-Farbkontrast
+      von 7:1 empfohlen, wie er auf dieser Webseite verwendet ist. Sprich: der
+      Text, den Du jetzt liest, hat den Mindestkontrast, der für
+      Web-Accessibility empfohlen wird.
+    </p>
+    <h3>Hell oder dunkel?</h3>
+    <p>
+      Der Kontrast zwischen Schrift und Hintergrund muss durch die Helligkeit
+      realisiert werden, nicht durch den Farbton. Zu Beginn der Farbplanung
+      solltest Du dir überlegen: was soll es werden, hell auf dunkel oder dunkel
+      auf hell? Und: nein, rot auf blau geht wirklich nicht. <br />
+      Sinnvoll ist es auch, ein Dark-Theme UND ein Light-Theme anzubieten, weil
+      beide teilweise Barrieren darstellen können. Hierfür gibt es auch
+      Browserflags, die zum automatischen selektieren genutzt werden können.
+    </p>
+
+    <h3>Farbkontrast-Tool</h3>
+    <p>
+      Im frühen Planungsstadium einer Webseite oder App möchte man für
+      gewöhnlich Farben festlegen, und da ist noch nicht so viel programmiert,
+      dass man WAVE sinnvoll nutzen kann. Hier bietet sich
+      <a href="https://webaim.org/resources/contrastchecker/">
+        ein Farbkontraste-Tester</a
+      >
+      zum Ausprobieren an.
+    </p>
+    <h3>Vorsicht bei Hintergrundbildern</h3>
+    <p>
+      Bei Farbverläufen und Hintergrundbildern ist Vorsicht geboten. Es ist da
+      generell schwierig zu gewährleisten, dass wirklich die komplette Schrift
+      auf allen Geräten mit hinreichend Kontrast dargestellt wird. Das heißt
+      nicht, dass Accessibility und Hintergrundbilder generell unverträglich
+      sind, man sollte es "nur" besonders penibel testen. Und da das bei dem
+      durchschnittlichen Open-Source-Project niemand tut, bist du in der Regel
+      besser damit bedient, den Text auf einfarbigen Hintergrund zu setzen.
+      <br />
+      Auf bewegliche Darstellungen hinter einem Text solltest Du generell
+      verzichten, außer bei dem Text handelt es sich um Untertitel.
+    </p>
+
+    <h2>Schriftgröße 6</h2>
+
+    <p>
+      Die Schriftgröße sollte nicht zu klein sein. Außerdem ist es wichtig, dass
+      die Schriftgröße im Browser verstellbar ist bzw. dass man in der Webseite
+      zoomen kann.
+    </p>
+
+    <h2>Semantischer Code 7</h2>
     <p>
       "Semantischer Code" bedeutet, dass die Elemente entsprechend ihrer
       inhaltlichen Bedeutung ausgezeichnet sind.
@@ -169,100 +307,7 @@
       hast du viele Sachen richtig gemacht.
     </p>
 
-    <h2>Farbkontrast</h2>
-    <p>
-      Für viele Menschen ist es wichtig, dass der Kontrast zwischen Schrift und
-      Hintergrund groß genug ist. 100% schwarz auf 100% weiß ist aber auch nicht
-      die ideale Lösung. Für optimale Lesbarkeit wird ein Mindest-Farbkontrast
-      von 7:1 empfohlen, wie er auf dieser Webseite verwendet ist. Sprich: der
-      Text, den Du jetzt liest, hat den Mindestkontrast, der für
-      Web-Accessibility empfohlen wird.
-    </p>
-    <h3>Hell oder dunkel?</h3>
-    <p>
-      Der Kontrast zwischen Schrift und Hintergrund muss durch die Helligkeit
-      realisiert werden, nicht durch den Farbton. Zu Beginn der Farbplanung
-      solltest Du dir überlegen: was soll es werden, hell auf dunkel oder dunkel
-      auf hell? Und: nein, rot auf blau geht wirklich nicht.
-    </p>
-    <h3>Farbkontrast-Tool</h3>
-    <p>
-      Im frühen Planungsstadium einer Webseite oder App möchte man für
-      gewöhnlich Farben festlegen, und da ist noch nicht so viel programmiert,
-      dass man WAVE sinnvoll nutzen kann. Hier bietet sich
-      <a href="https://webaim.org/resources/contrastchecker/">
-        ein Farbkontraste-Tester</a
-      >
-      zum Ausprobieren an.
-    </p>
-    <h3>Vorsicht bei Hintergrundbildern</h3>
-    <p>
-      Bei Farbverläufen und Hintergrundbildern ist Vorsicht geboten. Es ist da
-      generell schwierig zu gewährleisten, dass wirklich die komplette Schrift
-      auf allen Geräten mit hinreichend Kontrast dargestellt wird. Das heißt
-      nicht, dass Accessibility und Hintergrundbilder generell unverträglich
-      sind, man sollte es "nur" besonders penibel testen. Und da das bei dem
-      durchschnittlichen Open-Source-Project niemand tut, bist du in der Regel
-      besser damit bedient, den Text auf einfarbigen Hintergrund zu setzen.
-      <br />
-      Auf bewegliche Darstellungen hinter einem Text solltest Du generell
-      verzichten, außer bei dem Text handelt es sich um Untertitel.
-    </p>
-
-    <h2>Schriftgröße</h2>
-
-    <p>
-      Die Schriftgröße sollte nicht zu klein sein. Außerdem ist es wichtig, dass
-      die Schriftgröße im Browser verstellbar ist bzw. dass man in der Webseite
-      zoomen kann.
-    </p>
-
-    <h2>Sprechende Links</h2>
-    <p>
-      Damit ein Screenreader die Webseite gut verständlich vorlesen kann, ist es
-      bei Links wichtig, dass der Teil des Satzes, der den Link trägt, wörtlich
-      das sagt, wohin gelinkt werden soll. Zum Beispiel:
-    </p>
-    <div class="indented">
-      "Hier bietet sich
-      <a href="https://webaim.org/resources/contrastchecker/">
-        ein Farbkontraste-Tester</a
-      >
-      zum Ausprobieren an."
-    </div>
-    <p>ist gut und</p>
-    <div class="indented">
-      "Hier bietet sich ein Farbkontraste-Tester zum Ausprobieren an.
-      <a href="https://webaim.org/resources/contrastchecker/"
-        >(Hier klicken.)</a
-      >
-      "
-    </div>
-    <p>
-      ist nicht gut.
-    </p>
-
-    <h2>Informationen als Text vorhalten</h2>
-    <p>
-      Für verschiedene besondere Bedürfnisse kann Text auf verschiedene Weise
-      zugänglich gemacht werden, zum Beispiel mit einer
-      <a href="https://de.wikipedia.org/wiki/Braillezeile">Braillezeile</a>. Das
-      funktioniert aber nur wenn die Information auch als Text vorliegt. <br />
-      Achte darauf dass Grafiken
-      <a href="https://de.wikipedia.org/wiki/Alt-Text">einen Alt-Text</a>
-      enthalten. Beispiel:
-    </p>
-    <div class="indented">
-      <code>
-        &lt;img src="koelner-dom.jpg" alt="Der Kölner Dom im Abendlicht."&gt;
-      </code>
-    </div>
-    <p>
-      Wenn es möglich ist, mache Untertitel zu Deinen Videos und veröffentliche
-      Podcast-Scripte. Das verbessert auch die Durchsuchbarkeit.
-    </p>
-
-    <h2>Sensorik und Animationen</h2>
+    <h2>Sensorik und Animationen 8</h2>
     <p>
       Es gibt eine Systemeinstellung "weniger Bewegung", die je nach
       Betriebssystem unterschiedlich heißt aber betriebssystem-übergreifend mit
@@ -289,16 +334,6 @@
         } <br />}
       </code>
     </div>
-
-    <h2>Ausnahmen und Erwartungs&#173;management</h2>
-    <p>
-      Wenn Du weißt, dass auf Deiner Webseite etwas stattfindet, das für manche
-      behinderte Personen nicht (gut) funktioniert, ist ein guter Kompromiss,
-      das so auszuweisen. Zum Beispiel könnte an einem Link zu einem Disko-BBB
-      mit Blinklicht dran stehen "Achtung Blinklicht, dieser BBB ist für
-      Epileptiker*innen ungeeignet." So kannst Du mit Deinem Hackerspace
-      Blinklicht-Spaß haben, ohne anderen zu schaden.
-    </p>
 
     <h2>Weiterführende Links</h2>
     <h3>Umfassende Informationen</h3>
