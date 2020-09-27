@@ -47,8 +47,9 @@ legend {
 }
 
 .indented {
-  padding-left: 2rem;
+  padding-left: 1.5rem;
 }
+
 
 .tldr {
   border: solid 2px pink;
@@ -74,7 +75,7 @@ code {
     1.margin-top: 5em;
   }
   .indented {
-    padding-left: 5rem;
+    padding-left: 3rem;
   }
 }
 

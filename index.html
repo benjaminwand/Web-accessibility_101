@@ -27,7 +27,7 @@
     </p>
     <ul>
       <li>
-        Dein Projekt ist (als Fallback) in Textform verfügbar und mit einem
+        Das Projekt ist (als Fallback) in Textform verfügbar und mit einem
         Screenreader benutzbar,
       </li>
       <li>man kann drin zoomen, und</li>
@@ -60,23 +60,23 @@
       es einfacher von Anfang an semantischen Code zu schreiben als
       unsemantischen Code später zu refaktorieren. <br />
       Natürlich gibt es keine absolute Barrierefreiheit und das erwartet auch
-      niemand von dir. Uns ist es wichtig, Dich darüber zu informieren, was
+      niemand von Dir. Uns ist es wichtig, Dich darüber zu informieren, was
       Barrieren sind und, wie Du sie vermeiden kannst.
     </p>
     <h3>Ausnahmen und Erwartungs&#173;management</h3>
     <p>
       Wenn Du weißt, dass auf Deiner Webseite etwas stattfindet, das für manche
-      behinderte Personen nicht (gut) funktioniert, ist es nicht unbedingt
-      schlimm, aber du solltest es ausweisen. Zum Beispiel könnte an einem Link
-      zu einem Disko-BBB mit Blinklicht dran stehen "Achtung Blinklicht, dieser
-      BBB ist für Epileptiker*innen ungeeignet." So kannst Du mit Deinem
-      Hackerspace Blinklicht-Spaß haben, ohne anderen zu schaden.
+      Menschen mit Behinderungen nicht (gut) funktioniert, ist es nicht
+      unbedingt schlimm, aber du solltest es ausweisen. Zum Beispiel könnte an
+      einem Link zu einem Disko-BBB mit Blinklicht dran stehen "Achtung
+      Blinklicht, dieser BBB ist für Epileptiker*innen ungeeignet." So kannst Du
+      mit Deinem Hackerspace Blinklicht-Spaß haben, ohne anderen zu schaden.
     </p>
     <p>
       "Blinklicht" kann auf dem rC3 auch als Tag gesetzt werden, der zum einen
       Menschen die Möglichkeit bietet, Inhalte nach diesem Kriterium
       rauszufiltern. Es freuen sich aber natürlich auch Menschen, die voll auf
-      Blinklicht stehen, weil sie deine Disko leichter finden können: Viele
+      Blinklicht stehen, weil sie Deine Disko leichter finden können: Viele
       Optionen für Barrierefreiheit sind unterm Strich praktisch für alle
       Menschen.
     </p>
@@ -88,7 +88,7 @@
       strukturiere Deine Informationen optisch passend zum Inhalt, so dass man
       das Gesuchte schnell finden kann. Für lange Fließtexte solltest Du ein
       tl;dr schreiben.<br />
-      Nichtbehinderten Menschen sei folgendes Bild mitgegeben: Deine Webseite
+      Menschen ohne Behinderungen sei folgendes Bild mitgegeben: Deine Webseite
       oder App sollte auch benutzbar sein, wenn man betrunken ist, oder einen
       Unfall hatte. Davon profitieren besonders Menschen, die schlecht lesen
       können oder die gerade überfordert sind.
@@ -148,13 +148,16 @@
       Menschen daher die Möglichkeit, bestimmte Tags zu filtern, damit sie mit
       diesen auf dem Event nicht unerwartet konfrontiert werden. Bitte sei also
       fleißig beim Taggen und erwähne Themen, die für manche potentiell
-      schwierig sein könnten. (Auch hier freut sich die Durchsuchbarkeit!)
-      <br />
-      Kurz am Anfang eines Beitrags den Inhalt durch Content Notes zu
-      beschreiben, kann hier helfen. <br />
-      Beispiel für eine blinkende Disko, die vom C3WOC ausgerichtet wird: <br />
-      CN: Blinklicht, Essen, Musik
+      schwierig sein könnten.
     </p>
+    <p>
+      Am Anfang eines Beitrags den Inhalt durch Content Notes zu beschreiben,
+      ist eine gute Möglichkeit. <br />
+      Beispiel für eine blinkende Disko, die vom C3WOC ausgerichtet wird:
+    </p>
+    <div class="indented">
+      CN: Waffeln, Essen, Alkohol, Musik, Blinklicht
+    </div>
 
     <h2>Farbkontrast</h2>
     <p>
@@ -170,17 +173,20 @@
       Der Kontrast zwischen Schrift und Hintergrund muss durch die Helligkeit
       realisiert werden, nicht durch den Farbton. Zu Beginn der Farbplanung
       solltest Du dir überlegen: was soll es werden, hell auf dunkel oder dunkel
-      auf hell? Und: nein, rot auf blau geht wirklich nicht. <br />
-      Sinnvoll ist es auch, ein Dark-Theme UND ein Light-Theme anzubieten, weil
-      beide teilweise Barrieren darstellen können. Hierfür gibt es auch
-      Browserflags, die zum automatischen selektieren genutzt werden können.
+      auf hell? Und: nein, rot auf blau geht wirklich nicht.
+    </p>
+    <p>
+      Hervorragend wäre es, ein Dark-Theme <i>und</i> ein Light-Theme
+      anzubieten, verschiedene Menschen haben da verschiedene Vorlieben und
+      Bedürfnisse. Hierfür gibt es auch Browserflags, die zum automatischen
+      selektieren genutzt werden können.
     </p>
 
     <h3>Farbkontrast-Tool</h3>
     <p>
       Im frühen Planungsstadium einer Webseite oder App möchte man für
-      gewöhnlich Farben festlegen, und da ist noch nicht so viel programmiert,
-      dass man WAVE sinnvoll nutzen kann. Hier bietet sich
+      gewöhnlich Farben festlegen. Damit Du sicher gehen kannst dass der
+      Farbkontrast passt, bietet sich
       <a href="https://webaim.org/resources/contrastchecker/">
         ein Farbkontraste-Tester</a
       >
@@ -220,17 +226,24 @@
     <div class="indented">
       <code>
         &lt;form&gt; <br />
-        &lt;p&gt;Was ist Dein Lieblingseis?&lt;/p&gt; <br />
+        &lt;p&gt;Was ist Dein Lieblingssaal?&lt;/p&gt;
+        <br />
         &lt;fieldset&gt; <br />
-        &lt;input type="radio" id="mc" name="Lieblingseis" value="Banane" /&gt;
+        &lt;input type="radio" id="mc" name="Saal" value="Ada" /&gt;
         <br />
-        &lt;label for="mc"&gt; Banane&lt;/label&gt; <br />
-        &lt;input type="radio" id="vi" name="Lieblingseis" value="Erdbeer" /&gt;
+        &lt;label for="mc"&gt; Ada&lt;/label&gt; <br />
+        &lt;input type="radio" id="vi" name="Saal" value="Borg" /&gt;
         <br />
-        &lt;label for="vi"&gt; Erdbeer&lt;/label&gt; <br />
-        &lt;input type="radio" id="ae" name="Lieblingseis" value="Schokolade"
-        /&gt; <br />
-        &lt;label for="ae"&gt; Schokolade&lt;/label&gt; <br />
+        &lt;label for="vi"&gt; Borg&lt;/label&gt; <br />
+        &lt;input type="radio" id="ae" name="Saal" value="Clarke" /&gt;
+        <br />
+        &lt;label for="ae"&gt; Clarke&lt;/label&gt; <br />
+        &lt;input type="radio" id="dj" name="Saal" value="Dijkstra" /&gt;
+        <br />
+        &lt;label for="dj"&gt; Dijkstra&lt;/label&gt; <br />
+        &lt;input type="radio" id="el" name="Saal" value="Eliza" /&gt;
+        <br />
+        &lt;label for="el"&gt; Eliza&lt;/label&gt; <br />
         &lt;/fieldset&gt; <br />
         &lt;/form&gt;
       </code>
@@ -238,14 +251,18 @@
     <p>resultiert in:</p>
     <div class="form-example indented">
       <form>
-        <p>Was ist Dein Lieblingseis?</p>
+        <p>Was ist Dein Lieblingssaal?</p>
         <fieldset>
-          <input type="radio" id="mc1" name="Lieblingseis" value="Banane" />
-          <label for="mc1"> Banane</label>
-          <input type="radio" id="vi1" name="Lieblingseis" value="Erdbeer" />
-          <label for="vi1"> Erdbeer</label>
-          <input type="radio" id="ae1" name="Lieblingseis" value="Schokolade" />
-          <label for="ae1"> Schokolade</label>
+          <input type="radio" id="mc1" name="Saal" value="Ada" />
+          <label for="mc1"> Ada</label>
+          <input type="radio" id="vi1" name="Saal" value="Borg" />
+          <label for="vi1"> Borg</label>
+          <input type="radio" id="ae1" name="Saal" value="Clarke" />
+          <label for="ae1"> Clarke</label>
+          <input type="radio" id="dj1" name="Saal" value="Dijkstra" />
+          <label for="dj1"> Dijkstra</label>
+          <input type="radio" id="el1" name="Saal" value="Eliza" />
+          <label for="el1"> Eliza</label>
         </fieldset>
       </form>
     </div>
@@ -253,17 +270,23 @@
     <div class="indented">
       <code>
         &lt;form&gt; <br />&lt;fieldset&gt; <br />
-        &lt;legend&gt;Was ist Dein Lieblingseis?&lt;/legend&gt; <br />
-        &lt;input type="radio" id="mc" name="Lieblingseis" value="Banane" /&gt;
+        &lt;legend&gt;Was ist Dein Lieblingssaal?&lt;/legend&gt; <br />
+        &lt;input type="radio" id="mc" name="Saal" value="Ada" /&gt;
         <br />
-        &lt;label for="mc"&gt; Banane&lt;/label&gt; <br />
-        &lt;input type="radio" id="vi" name="Lieblingseis" value="Erdbeer" /&gt;
+        &lt;label for="mc"&gt; Ada&lt;/label&gt; <br />
+        &lt;input type="radio" id="vi" name="Saal" value="Borg" /&gt;
         <br />
-        &lt;label for="vi"&gt; Erdbeer&lt;/label&gt; <br />
-        &lt;input type="radio" id="ae" name="Lieblingseis" value="Schokolade"
-        /&gt; <br />
-        &lt;label for="ae"&gt;Schokolade&lt;/label&gt;
+        &lt;label for="vi"&gt; Borg&lt;/label&gt; <br />
+        &lt;input type="radio" id="ae" name="Saal" value="Clarke" /&gt;
         <br />
+        &lt;label for="ae"&gt;Clarke&lt;/label&gt;
+        <br />
+        &lt;input type="radio" id="dj" name="Saal" value="Dijkstra" /&gt;
+        <br />
+        &lt;label for="dj"&gt; Dijkstra&lt;/label&gt; <br />
+        &lt;input type="radio" id="el" name="Saal" value="Eliza" /&gt;
+        <br />
+        &lt;label for="el"&gt; Eliza&lt;/label&gt; <br />
         &lt;/fieldset&gt; <br />
         &lt;/form&gt;
       </code>
@@ -272,13 +295,17 @@
     <div class="form-example indented">
       <form>
         <fieldset>
-          <legend>Was ist Dein Lieblingseis?</legend>
-          <input type="radio" id="mc2" name="Lieblingseis" value="Banane" />
-          <label for="mc2"> Banane</label>
-          <input type="radio" id="vi2" name="Lieblingseis" value="Erdbeer" />
-          <label for="vi2"> Erdbeer</label>
-          <input type="radio" id="ae2" name="Lieblingseis" value="Schokolade" />
-          <label for="ae2">Schokolade</label>
+          <legend>Was ist Dein Lieblingssaal?</legend>
+          <input type="radio" id="mc2" name="Saal" value="Ada" />
+          <label for="mc2"> Ada</label>
+          <input type="radio" id="vi2" name="Saal" value="Borg" />
+          <label for="vi2"> Borg</label>
+          <input type="radio" id="ae2" name="Saal" value="Clarke" />
+          <label for="ae2">Clarke</label>
+          <input type="radio" id="dj2" name="Saal" value="Dijkstra" />
+          <label for="dj2"> Dijkstra</label>
+          <input type="radio" id="el2" name="Saal" value="Eliza" />
+          <label for="el2"> Eliza</label>
         </fieldset>
       </form>
     </div>
@@ -286,7 +313,7 @@
       Optisch ist der Unterschied gering (und kann selbstverständlich mit CSS
       gestylt werden). Semantisch jedoch ist es unterschiedlich. Die Frage "Was
       ist Dein Lieblingseis?" ist kein eigener Absatz (<code>&lt;p&gt;</code>)
-      sondern direkt zum Fielset gehörig und sollte als Legende
+      sondern direkt zum Fieldset gehörig und sollte als Legende
       (<code>&lt;legend&gt;</code>) ausgezeichnet sein, weil Screenreader das
       dann als zusammengehörig interpretieren.
       <a href="http://diveintohtml5.info">HTML5</a> ist wunderbar dafür
