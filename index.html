@@ -6,6 +6,17 @@
     <title>Web Accessibility 101</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="a11y-light.css" />
+    <link
+      rel="stylesheet"
+      media=" (prefers-color-scheme: dark)"
+      href="a11y-dark.css"
+    />
+    <script src="highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </head>
   <body>
     <h1>Web Accessibility 101</h1>
@@ -223,31 +234,25 @@
     <p>
       Folgender Code:
     </p>
-    <div class="indented">
-      <code>
-        &lt;form&gt; <br />
-        &lt;p&gt;Was ist Dein Lieblingssaal?&lt;/p&gt;
-        <br />
-        &lt;fieldset&gt; <br />
-        &lt;input type="radio" id="mc" name="Saal" value="Ada" /&gt;
-        <br />
-        &lt;label for="mc"&gt; Ada&lt;/label&gt; <br />
-        &lt;input type="radio" id="vi" name="Saal" value="Borg" /&gt;
-        <br />
-        &lt;label for="vi"&gt; Borg&lt;/label&gt; <br />
-        &lt;input type="radio" id="ae" name="Saal" value="Clarke" /&gt;
-        <br />
-        &lt;label for="ae"&gt; Clarke&lt;/label&gt; <br />
-        &lt;input type="radio" id="dj" name="Saal" value="Dijkstra" /&gt;
-        <br />
-        &lt;label for="dj"&gt; Dijkstra&lt;/label&gt; <br />
-        &lt;input type="radio" id="el" name="Saal" value="Eliza" /&gt;
-        <br />
-        &lt;label for="el"&gt; Eliza&lt;/label&gt; <br />
-        &lt;/fieldset&gt; <br />
-        &lt;/form&gt;
-      </code>
-    </div>
+
+    <pre><code class="html">
+  &lt;form&gt;
+    &lt;p&gt;Was ist Dein Lieblingssaal?&lt;/p&gt;
+    &lt;fieldset&gt;
+      &lt;input type="radio" id="mc" name="Saal" value="Ada" /&gt;
+      &lt;label for="mc"&gt; Ada&lt;/label&gt;
+      &lt;input type="radio" id="vi" name="Saal" value="Borg" /&gt;
+      &lt;label for="vi"&gt; Borg&lt;/label&gt;
+      &lt;input type="radio" id="ae" name="Saal" value="Clarke" /&gt;
+      &lt;label for="ae"&gt; Clarke&lt;/label&gt;
+      &lt;input type="radio" id="dj" name="Saal" value="Dijkstra" /&gt;
+      &lt;label for="dj"&gt; Dijkstra&lt;/label&gt;
+      &lt;input type="radio" id="el" name="Saal" value="Eliza" /&gt;
+      &lt;label for="el"&gt; Eliza&lt;/label&gt;
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+    </code></pre>
+
     <p>resultiert in:</p>
     <div class="form-example indented">
       <form>
@@ -267,30 +272,23 @@
       </form>
     </div>
     <p>und folgender Code:</p>
-    <div class="indented">
-      <code>
-        &lt;form&gt; <br />&lt;fieldset&gt; <br />
-        &lt;legend&gt;Was ist Dein Lieblingssaal?&lt;/legend&gt; <br />
-        &lt;input type="radio" id="mc" name="Saal" value="Ada" /&gt;
-        <br />
-        &lt;label for="mc"&gt; Ada&lt;/label&gt; <br />
-        &lt;input type="radio" id="vi" name="Saal" value="Borg" /&gt;
-        <br />
-        &lt;label for="vi"&gt; Borg&lt;/label&gt; <br />
-        &lt;input type="radio" id="ae" name="Saal" value="Clarke" /&gt;
-        <br />
-        &lt;label for="ae"&gt;Clarke&lt;/label&gt;
-        <br />
-        &lt;input type="radio" id="dj" name="Saal" value="Dijkstra" /&gt;
-        <br />
-        &lt;label for="dj"&gt; Dijkstra&lt;/label&gt; <br />
-        &lt;input type="radio" id="el" name="Saal" value="Eliza" /&gt;
-        <br />
-        &lt;label for="el"&gt; Eliza&lt;/label&gt; <br />
-        &lt;/fieldset&gt; <br />
-        &lt;/form&gt;
-      </code>
-    </div>
+    <pre><code class="html">
+  &lt;form&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Was ist Dein Lieblingssaal?&lt;/legend&gt;
+      &lt;input type="radio" id="mc" name="Saal" value="Ada" /&gt;
+      &lt;label for="mc"&gt; Ada&lt;/label&gt;
+      &lt;input type="radio" id="vi" name="Saal" value="Borg" /&gt;
+      &lt;label for="vi"&gt; Borg&lt;/label&gt;
+      &lt;input type="radio" id="ae" name="Saal" value="Clarke" /&gt;
+      &lt;label for="ae"&gt;Clarke&lt;/label&gt;
+      &lt;input type="radio" id="dj" name="Saal" value="Dijkstra" /&gt;
+      &lt;label for="dj"&gt; Dijkstra&lt;/label&gt;
+      &lt;input type="radio" id="el" name="Saal" value="Eliza" /&gt;
+      &lt;label for="el"&gt; Eliza&lt;/label&gt;
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+      </code></pre>
     <p>resultiert in:</p>
     <div class="form-example indented">
       <form>
@@ -349,18 +347,22 @@
       Bewegung" aktiviert hat.
     </p>
     <p>Codebeispiel:</p>
-    <div class="indented">
-      <code>
-        .myDiv { <br />transition: all ease 0.6s; <br />
-        } <br />
-        .myDiv:hover { <br />
-        transform: scale(1.05) <br />rotate(0.5deg); <br />
-        } <br />@media (prefers-reduced-motion: reduce) { <br />.myDiv:hover {
-        <br />transform: scale(1) <br />
-        rotate(0deg); <br />
-        } <br />}
-      </code>
-    </div>
+
+    <pre><code class="CSS">
+  .myDiv {
+    transition: all ease 0.6s;
+  }
+  .myDiv:hover {
+    transform: scale(1.05)
+    rotate(0.5deg);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .myDiv:hover {
+      transform: scale(1)
+      rotate(0deg);
+    }
+  }
+    </code></pre>
 
     <h2>Weiterführende Links</h2>
     <h3>Umfassende Informationen</h3>
