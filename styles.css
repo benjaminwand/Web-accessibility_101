@@ -50,7 +50,6 @@ legend {
   padding-left: 1.5rem;
 }
 
-
 .tldr {
   border: solid 2px pink;
   border-radius: 8px;
@@ -99,6 +98,9 @@ code {
   a {
     text-decoration: underline;
   }
+  a::after {
+    content: " (" attr(href) ") ";
+  }
 
   p,
   h2,
@@ -122,6 +124,9 @@ code {
   }
   code {
     font-size: 10px;
+  }
+  p {
+    max-width: 100ch;
   }
 }
 @media (prefers-color-scheme: dark) {
