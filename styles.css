@@ -7,6 +7,8 @@ body {
   margin: auto;
   padding: 1rem;
   font-size: large;
+   -ms-scroll-snap-type: y mandatory;
+       scroll-snap-type: y mandatory;
 }
 
 a {
@@ -29,6 +31,7 @@ h2 {
   color: white;
   background-color: #595959;
   padding: 0.25rem 2.5rem;
+  scroll-snap-align: start;
 }
 p {
   max-width: 78ch;
