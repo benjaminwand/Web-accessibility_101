@@ -7,8 +7,8 @@ body {
   margin: auto;
   padding: 1rem;
   font-size: large;
-   -ms-scroll-snap-type: y mandatory;
-       scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
 }
 
 a {
@@ -24,13 +24,13 @@ h1 {
   text-align: center;
   color: white;
   background-color: #595959;
-  padding: 0.25rem 2.5rem;
+  padding: auto;
 }
 h2 {
   text-align: center;
   color: white;
   background-color: #595959;
-  padding: 0.25rem 2.5rem;
+  padding: 0.25rem auto;
   scroll-snap-align: start;
 }
 p {
@@ -73,9 +73,13 @@ code {
     width: 16rem;
     margin-left: 1rem;
   }
+  h1 {
+    padding: 0.25rem 2.5rem;
+  }
   h2 {
     display: inline-block;
     margin-top: 1.5em;
+    padding: 0.25rem 2.5rem;
   }
   .indented {
     padding-left: 3rem;
@@ -136,6 +140,7 @@ code {
   body {
     background: #353535;
     color: #c3c3c3;
+    font-weight: 350;
   }
   .tldr {
     border: solid 2px #7accff;
