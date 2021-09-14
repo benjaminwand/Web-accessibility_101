@@ -25,6 +25,7 @@ h1 {
   color: white;
   background-color: #595959;
   padding: auto;
+  scroll-snap-align: start;
 }
 h2 {
   text-align: center;
