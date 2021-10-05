@@ -41,7 +41,20 @@ p {
 fieldset {
   border: solid 2px pink;
   border-radius: 8px;
-  display: inline-block;
+  display: inline-grid;
+  grid-auto-flow: column;
+  place-items: center;
+}
+input {
+  min-height: 35px;
+  min-width: 35px;
+  color: currentColor;
+  margin-right: 1em;
+}
+label {
+  line-height: 44px;
+  vertical-align: middle;
+  margin-right: 2em;
 }
 
 legend {
