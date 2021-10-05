@@ -44,6 +44,7 @@ fieldset {
   display: inline-grid;
   grid-auto-flow: column;
   place-items: center;
+  accent-color: pink;
 }
 input {
   min-height: 35px;
