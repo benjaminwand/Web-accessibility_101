@@ -41,21 +41,34 @@ p {
 fieldset {
   border: solid 2px pink;
   border-radius: 8px;
-  display: inline-grid;
-  grid-auto-flow: column;
-  place-items: center;
   accent-color: pink;
+  max-width: 100vw;
+  display: inline-grid;
+  grid-template-columns:  50px auto;
+}
+
+@media (min-width: 90ch) {
+  fieldset {
+    display: inline-flex;
+    flex-direction: row;
+  }
+  input {
+    align-self: center;
+  }
 }
 input {
-  min-height: 35px;
-  min-width: 35px;
+  min-height: 30px;
+  min-width: 30px;
   color: currentColor;
-  margin-right: 1em;
+  margin-right: 0.7em;
 }
 label {
-  line-height: 44px;
+  font-size: max(1em, 25px);
   vertical-align: middle;
-  margin-right: 2em;
+  margin-right: 1em;
+}
+label:last-child {
+  margin-right: 0;
 }
 
 legend {
