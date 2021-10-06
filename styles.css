@@ -44,7 +44,7 @@ fieldset {
   accent-color: pink;
   max-width: 100vw;
   display: inline-grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
 }
 input {
   min-height: 30px;
